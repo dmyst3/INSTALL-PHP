@@ -1,1 +1,12 @@
-
+name: 'Install PHP'
+description: 'Github Composite action to install php'
+inputs:
+  version:
+    description: 'version of PHP you will like to install'
+    required: true
+    default: '8.1'
+runs:
+  using: "composite"
+  steps:
+    - run: installPHP.sh
+      shell: bash
