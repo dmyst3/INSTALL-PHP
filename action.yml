@@ -8,5 +8,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: installPHP.sh
+    - run: installs/installPHP.sh
       shell: bash
