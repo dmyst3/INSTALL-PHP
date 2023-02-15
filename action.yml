@@ -22,5 +22,5 @@ runs:
         ls -la
       shell: bash
       
-    - run: install.sh
+    - run: test.py
       shell: bash
