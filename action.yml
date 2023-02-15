@@ -8,6 +8,10 @@ inputs:
 runs:
   using: "composite"
   steps:
+  
+    - name: checkout
+      uses: actions/checkout@2
+      
     - name: Install php
       if: "! contains(toJSON(steps), 'php')"
       run: |
