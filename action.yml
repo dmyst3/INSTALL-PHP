@@ -17,7 +17,7 @@ runs:
       
     - name: print dir content
       run: |
-        sh ls -la
+        ls -la
       shell: bash
       
     - name: test shell execution
