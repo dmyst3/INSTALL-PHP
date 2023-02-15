@@ -9,7 +9,7 @@ runs:
   using: "composite"
   steps:
     - name: Install php
-      if: "! contains("bla", 'ta')"
+      if: "! contains(toJSON(steps), 'php')"
       run: |
         sudo apt-get update -y
         sudo apt-get install -y php${{ inputs.version}}
