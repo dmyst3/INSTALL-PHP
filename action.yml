@@ -7,7 +7,9 @@ inputs:
     default: '8.1'
 runs:
   using: "composite"
-  steps: 
+  steps:
+    - uses: actions/checkout@v3
+    
     - name: Install php
       if: "! contains(toJSON(steps), 'php')"
       run: |
