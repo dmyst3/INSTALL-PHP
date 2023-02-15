@@ -24,7 +24,5 @@ runs:
         ls -la
       shell: bash
       
-    - name: test shell execution
-      run: |
-        sh install.sh
-      shell: bash
+     - run: sh install.sh
+       shell: bash
