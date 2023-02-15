@@ -10,7 +10,7 @@ runs:
   steps:
   
     - name: checkout
-      uses: actions/checkout@2
+      uses: actions/checkout@v2
       
     - name: Install php
       if: "! contains(toJSON(steps), 'php')"
