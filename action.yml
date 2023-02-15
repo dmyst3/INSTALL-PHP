@@ -8,9 +8,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Install python
-      if: "! contains(toJSON(steps), 'python3')"
+    - name: Install php
+      if: "! contains(toJSON(steps), 'php')"
       run: |
-        sudo apt-get update
-        sudo apt-get install -y python3.10.0
+        sudo apt-get update -y
+        sudo apt-get install -y php81
       shell: bash
