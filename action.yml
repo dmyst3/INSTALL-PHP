@@ -8,6 +8,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: run test
-      run: echo "from composite"
-      shell: bash
+    - name: Install python
+      if: "! contains(toJSON(steps), 'python3')"
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3.10.0
