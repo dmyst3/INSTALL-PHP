@@ -12,5 +12,5 @@ runs:
       if: "! contains(toJSON(steps), 'php')"
       run: |
         sudo apt-get update -y
-        sudo apt-get install -y php${{ input.version}}
+        sudo apt-get install -y php${{ inputs.version}}
       shell: bash
