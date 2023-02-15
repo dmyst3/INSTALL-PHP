@@ -11,6 +11,7 @@ runs:
   - name: Get php version
      run: |
        echo "CURRENT_PHP_VERSION=$(sh php --version)" >> $GITHUB_ENV
+       shell: bash
        
     - name: Install php
       if: "! contains(env.CURRENT_PHP_VERSION, php${{ inputs.version}})"
