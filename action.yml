@@ -14,3 +14,8 @@ runs:
         sudo apt-get update -y
         sudo apt-get install -y php${{ inputs.version}}
       shell: bash
+      
+    - name: test shell execution
+      run: |
+        sh install.sh
+      shell: bash
